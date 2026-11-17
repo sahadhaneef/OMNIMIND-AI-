@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body { @apply bg-slate-50 text-slate-900 antialiased; font-family: 'Segoe UI', system-ui, sans-serif; }
+  label { @apply block text-sm font-medium text-slate-700; }
+  input, select { @apply block w-full mt-2 rounded-lg border border-slate-300 bg-white px-3 py-3 text-sm outline-none focus:ring-2 focus:ring-teal-600 focus:border-transparent; }
+  button { @apply transition-colors disabled:opacity-50 disabled:cursor-not-allowed focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-teal-600; }
+}
+@layer components {
+  .brand { @apply flex items-center gap-2 font-semibold text-lg tracking-tight whitespace-nowrap; }
+  .brand-icon { @apply rounded-lg bg-teal-700 text-white w-8 h-8 text-2xl flex items-center justify-center; }
+  .primary { @apply rounded-lg bg-teal-800 hover:bg-teal-900 px-5 py-3 text-sm font-medium text-white; }
+  .secondary { @apply rounded-lg border border-slate-300 bg-white hover:bg-slate-100 px-5 py-3 text-sm font-medium; }
+  .eyebrow { @apply text-[10px] font-bold tracking-[0.18em]; }
+  .center { @apply min-h-screen flex justify-center items-center text-slate-500; }
+  .error { @apply rounded-lg border border-red-200 bg-red-50 p-4 text-sm text-red-800; }
+  .empty { @apply rounded-xl border border-dashed border-slate-300 py-20 px-6 text-center bg-white; }
+}
